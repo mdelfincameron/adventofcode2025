@@ -18,7 +18,7 @@ bool isInvalid(string num, int div){
             }
         }
     }
-    cout << "Found invalid number: " << num << " with division " << div << endl;
+    //cout << "Found invalid number: " << num << " with division " << div << endl;
     return true;
 }
 
@@ -36,7 +36,6 @@ int main(){
 
     if(file.is_open()){
 
-        //Read line by line through file
         string line;
 
         while(getline(file,line,',')){
@@ -45,6 +44,7 @@ int main(){
             ranges.push_back(make_pair(first, second));
         }
 
+        //Bruteforce check every integer in ranges, every possible subdivision of integer as well
         for(auto p : ranges){
             for(int64_t i = p.first; i <= p.second; i++){
                 //cout << "Checking " << i << endl;

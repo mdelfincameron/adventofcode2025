@@ -9,7 +9,6 @@ int main(){
     fstream file;
     long password = 0;
 
-    //Get filename, open file
     cout << "Please input filename: ";
     cin >> filename;
     
@@ -17,7 +16,6 @@ int main(){
 
     if(file.is_open()){
 
-        //Read line by line through file
         string line;
         int sum = 50;
 

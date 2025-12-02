@@ -34,7 +34,6 @@ int main(){
 
     if(file.is_open()){
 
-        //Read line by line through file
         string line;
 
         while(getline(file,line,',')){
@@ -43,10 +42,10 @@ int main(){
             ranges.push_back(make_pair(first, second));
         }
 
+        //Bruteforce check every integer in ranges
         for(auto p : ranges){
             for(int64_t i = p.first; i <= p.second; i++){
                 //cout << "Checking " << i << endl;
-                //cout << s.substr(0, s.size()/2) << ":" << s.substr(s.size()/2) << endl;
                 if(isInvalid(i)){
                     sum += i;
                 }

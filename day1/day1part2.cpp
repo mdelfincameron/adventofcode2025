@@ -28,13 +28,15 @@ int main(){
             bool zeroStart = !sum;
             int length = line.length();
 
-            //Check for digit(s) in line
+            //Get number
             for(int i = 1; i < length; i++){
                 num *= 10;
                 num += line[i] - '0';
             }
 
             sum += (line[0] == 'R' ? num : -1 * num);
+
+            //cout << line << " " << num;
             
             if(!zeroStart && sum < 0){
                 password++;

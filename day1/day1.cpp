@@ -31,12 +31,12 @@ int main(){
                 num += line[i] - '0';
             }
 
-            //cout << line << " " << num;
-
+            //Simulate rotation, modulo 100 if rotation would go out of range
             sum = (sum + (line[0] == 'R' ? num : -1 * num)) % 100;
 
             //cout << ": " <<  sum <<endl;
 
+            //Check if rotation lands on 0
             if(!sum){
                 password++;
             }

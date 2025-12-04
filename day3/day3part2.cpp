@@ -26,13 +26,8 @@ int main(){
         while(getline(file,line)){
 
             vector<int> maxes(12, 9); 
-            vector<int> batteries;
             size_t pos = 0;
             
-            for(auto c : line){
-                batteries.push_back(c - '0');
-            }
-
             for(size_t i = 0; i < maxes.size(); i++){
                 int max = maxes[i]; 
                 string substr = line.substr(pos, line.size() - (11 - i) - pos);

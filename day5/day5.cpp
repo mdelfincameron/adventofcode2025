@@ -15,7 +15,7 @@ int main(){
     string filename;
     fstream file;
     vector<pair<int64_t,int64_t>> ranges;
-    int sum = 0;
+    int64_t sum = 0;
 
     //Get filename, open file
     cout << "Please input filename: ";
